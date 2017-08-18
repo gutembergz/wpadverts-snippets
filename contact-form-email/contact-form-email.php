@@ -34,7 +34,7 @@ function contact_form_email( $mail, $post_id, $form ) {
     $mail["to"] = get_option( "admin_email" );
     
     // Send a BBC copy of the email to Administrator
-    $mail["headers"][] = "BBC: " . get_option( "admin_email" );
+    $mail["headers"][] = "BCC: " . get_option( "admin_email" );
     
     // Include Advert price and location at the end of message
     $mail["message"] .= "\r\n---\r\n";
